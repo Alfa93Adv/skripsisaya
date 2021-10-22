@@ -15,4 +15,19 @@ class barang extends CI_Controller {
 		$data['barang'] = $this->M_Barang->getBarang();
 		$this->load->view('admin/barang', $data);
 	}
+	public function tambah barang()
+	{
+		$data['barang'] = $this->M_Barang->getBarang();
+		$this->load->view('admin/barang', $data);
+	}
+	public function hapus barang()
+	{
+		$data['barang'] = $this->M_Barang->getBarang();
+		$this->load->view('admin/barang', $data);
+	}
+	public function edit barang()
+	{
+		$data['barang'] = $this->M_Barang->getBarang();
+		$this->load->view('admin/barang', $data);
+	}
 }
