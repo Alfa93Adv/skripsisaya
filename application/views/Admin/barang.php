@@ -103,6 +103,27 @@
           }
           ?>
         </tbody>
+				 <tbody>
+            <?php 
+            $i=1;
+            foreach ($barang as $key) 
+            {
+             ?>
+             <tr>
+              <td><?php echo $i; ?></td>
+              <td><?php echo $key->id_barang;?></td>
+              <td><?php echo $key->nama_barang;?></td>
+              <td><?php echo $key->jumlah;?></td>
+              <td><?php echo $key->harga;?></td>
+              <td>
+                <a href="<?= base_url() ?>Barang/hapus_barang/<?= $key->id_barang?>" class="btn btn-danger" onclick="return confirm('Apakah Anda Ingin Menghapus Data : <?=$key->nama_barang;?> ?');"><i class="fa fa-trash"></i></span></a>
+              </td>
+            </tr>
+            <?php
+            $i++;
+          }
+          ?>
+        </tbody>
       </table>
     </div>
     </div>
